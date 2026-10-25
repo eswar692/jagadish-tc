@@ -234,12 +234,12 @@ export default function Footer() {
             </a>
           </p>
           <a
-            href="https://www.astrologercenter.in/"
+            href="https://kollegaalapandithmodiyallappaguruji.in/"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-1.5 text-xs text-[#76685d] transition hover:text-[#d8b568]"
           >
-            astrologercenter.in
+            kollegaalapandithmodiyallappaguruji.in/
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </a>
         </div>
