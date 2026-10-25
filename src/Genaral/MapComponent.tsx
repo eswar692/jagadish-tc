@@ -13,7 +13,7 @@ import {
 
 const GoogleMapSection = () => {
   const googleMapsEmbed =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4366.071147775168!2d76.40746779999999!3d14.2226719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bba750af5bb3879%3A0x4c4cd3a19b440adc!2z4LKV4LOH4LKw4LKz4LKmIOCyruCyvuCyguCypOCzjeCysOCyv-CylSDgspzgs43gsq_gs4vgsqTgsr_gsrfgs43gsq_gsrDgs4EgKEFTVFJPTE9HRVIp!5e1!3m2!1sen!2sin!4v1787980514805!5m2!1sen!2sin";
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62380.490183054!2d77.15138526974788!3d12.263118912665714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf1c34f3d3a7a7%3A0x2b5a3e591ee33b3b!2sSathegala%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1792857396387!5m2!1sen!2sin"
 
   return (
     <section className="relative overflow-hidden bg-[#f7f3eb] py-16 md:py-24 px-5">

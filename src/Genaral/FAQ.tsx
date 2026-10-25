@@ -6,315 +6,223 @@ import {
   Phone,
   Sparkles,
   HelpCircle,
+  ArrowUpRight,
+  Star,
 } from "lucide-react";
-import {
-  person_name,
-  phone_number,
-  whatsapp_number,
-} from "./secret";
+import { person_name, phone_number, whatsapp_number } from "./secret";
 
 const faqs = [
   {
     question: `Can We Meet Astrologer ${person_name}?`,
-    answer: `Yes, personal meetings are available with prior appointment. You can contact us on WhatsApp to check availability and arrange a suitable time.`,
+    answer:
+      "Yes, personal meetings are available with prior appointment. You can contact us on WhatsApp to check availability and arrange a suitable time.",
     type: "appointment",
+    category: "Appointments",
   },
   {
     question: "Is Telephonic Consultation Available?",
-    answer: `Yes. Telephonic consultations are available, allowing you to connect from anywhere. You can call us directly to discuss consultation availability.`,
+    answer:
+      "Yes. Telephonic consultations are available, allowing you to connect from anywhere. You can call us directly to discuss consultation availability.",
     type: "phone",
+    category: "Consultation",
   },
   {
     question: "What Kind Of Astrology Services Are Available?",
     answer:
       "We provide traditional guidance relating to Vastu, horoscope reading, career, marriage, relationships, family and business matters.",
     type: "service",
+    category: "Services",
   },
   {
     question: "What Kind Of Products Are Available?",
     answer:
       "Depending on your requirements, astrological and spiritual products such as gemstones, yantras and related traditional items may be available.",
     type: "products",
+    category: "Products",
   },
   {
     question: "Do You Offer Astrology Courses?",
     answer:
       "Yes. Astrology learning courses may be available for people interested in learning traditional astrology at different levels.",
     type: "course",
+    category: "Learning",
   },
   {
     question: "What Is Covered In The Astrology Course?",
     answer:
       "Course topics can include horoscope reading, fundamentals of astrology, palmistry basics and traditional predictive methods.",
     type: "course",
+    category: "Learning",
   },
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState(0);
 
-  const toggleFAQ = (index: number) => {
-    setOpenIndex((current) =>
-      current === index ? null : index
-    );
+const toggleFAQ = (index: number):void => { 
+    setOpenIndex(openIndex===index ? 0 : index); 
   };
 
+
   return (
-    <section className="relative overflow-hidden bg-[#f7f3eb] py-16 md:py-24 px-5">
+    <section className="relative isolate overflow-hidden bg-[#f8f5ef] px-4 py-20 sm:px-6 md:py-28">
+      {/* Soft celestial background details */}
+      <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.28] [background-image:radial-gradient(#c6a76a_0.7px,transparent_0.7px)] [background-size:22px_22px]" />
+      <div className="pointer-events-none absolute -right-32 -top-32 -z-10 h-[28rem] w-[28rem] rounded-full bg-[#d6b56b]/20 blur-[100px]" />
+      <div className="pointer-events-none absolute -bottom-40 -left-36 -z-10 h-[30rem] w-[30rem] rounded-full bg-[#7e2528]/10 blur-[110px]" />
 
-      {/* ======================================== */}
-      {/* BACKGROUND */}
-      {/* ======================================== */}
-
-      <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#c9a45b]/10 blur-3xl" />
-
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[#8b1e1e]/5 blur-3xl" />
-
-      <div className="absolute top-24 left-[5%] hidden lg:block w-24 h-24 rounded-full border border-[#c9a45b]/15" />
-
-      <div className="relative z-10 max-w-[1200px] mx-auto">
-
-        {/* ======================================== */}
-        {/* HEADER */}
-        {/* ======================================== */}
-
-        <div className="text-center max-w-3xl mx-auto mb-12">
-
-          <div className="flex items-center justify-center gap-2 mb-4">
-
-            <Sparkles className="w-4 h-4 text-[#b28535]" />
-
-            <span className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#96702f]">
-              NEED TO KNOW
+      <div className="mx-auto max-w-7xl">
+        {/* Section heading */}
+        <div className="mx-auto mb-14 max-w-3xl text-center md:mb-16">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#c5a15d]/35 bg-white/75 px-4 py-2 shadow-sm backdrop-blur-sm">
+            <Sparkles className="h-4 w-4 text-[#a17b35]" />
+            <span className="text-[10px] font-extrabold uppercase tracking-[0.24em] text-[#8a682f] sm:text-xs">
+              A little clarity
             </span>
-
-            <Sparkles className="w-4 h-4 text-[#b28535]" />
-
+            <Sparkles className="h-4 w-4 text-[#a17b35]" />
           </div>
-
-          <h2 className="montserrat text-3xl md:text-5xl font-extrabold text-[#291911] leading-tight">
-            Frequently Asked
-            <span className="block text-[#8b1e1e]">
-              Questions
-            </span>
+          <h2 className="montserrat text-4xl font-extrabold leading-[1.08] tracking-tight text-[#291b15] sm:text-5xl md:text-6xl">
+            Questions, answered
+            <span className="mt-2 block font-semibold text-[#8b292c]">with care and clarity.</span>
           </h2>
-
-          <div className="flex items-center justify-center gap-3 my-5">
-
-            <span className="w-16 h-[2px] bg-[#c9a45b]" />
-
-            <span className="w-2 h-2 rotate-45 bg-[#c9a45b]" />
-
-            <span className="w-16 h-[2px] bg-[#c9a45b]" />
-
+          <div className="mx-auto my-6 flex w-40 items-center gap-3">
+            <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#c5a15d]" />
+            <span className="h-2.5 w-2.5 rotate-45 border border-[#b78f45] bg-[#d9bd7c]" />
+            <span className="h-px flex-1 bg-gradient-to-l from-transparent to-[#c5a15d]" />
           </div>
-
-          <p className="open-sans text-base md:text-lg leading-7 text-[#6d5e52]">
-            Find quick answers about consultations, services, courses
-            and appointments.
+          <p className="open-sans mx-auto max-w-2xl text-sm leading-7 text-[#75675c] sm:text-base md:text-lg">
+            Everything you may want to know about consultations, traditional astrology services, products and courses.
           </p>
-
         </div>
 
-        {/* ======================================== */}
-        {/* MAIN FAQ LAYOUT */}
-        {/* ======================================== */}
-
-        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.6fr] gap-8 lg:gap-12 items-start">
-
-          {/* ================================= */}
-          {/* LEFT INFO PANEL */}
-          {/* ================================= */}
-
-          <div className="lg:sticky lg:top-8">
-
-            <div className="relative overflow-hidden rounded-3xl bg-[#21140e] p-7 md:p-8 shadow-2xl">
-
-              {/* Glow */}
-              <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-[#c9a45b]/15 blur-3xl" />
+        <div className="grid items-start gap-8 lg:grid-cols-[0.78fr_1.45fr] lg:gap-12">
+          {/* Contact card */}
+          <aside className="relative lg:sticky lg:top-8">
+            <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-br from-[#d7bd7d]/60 via-transparent to-[#8b292c]/20 blur-sm" />
+            <div className="relative overflow-hidden rounded-[1.8rem] bg-[#241711] p-7 text-white shadow-[0_24px_70px_rgba(48,29,19,0.2)] sm:p-8">
+              <div className="absolute -right-12 -top-12 h-44 w-44 rounded-full border border-[#d5b66e]/20" />
+              <div className="absolute -right-3 -top-3 h-28 w-28 rounded-full border border-[#d5b66e]/15" />
+              <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-transparent via-[#d8b96f] to-transparent" />
 
               <div className="relative">
-
-                <div className="w-14 h-14 rounded-2xl bg-[#c9a45b]/15 border border-[#c9a45b]/30 flex items-center justify-center">
-
-                  <HelpCircle className="w-7 h-7 text-[#e1c26f]" />
-
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d7b96e]/35 bg-[#d7b96e]/10 shadow-inner">
+                  <HelpCircle className="h-7 w-7 text-[#e6ca83]" strokeWidth={1.6} />
                 </div>
-
-                <h3 className="montserrat mt-6 text-2xl font-extrabold text-[#fff7e7]">
-                  Still Have Questions?
+                <p className="mt-7 text-[10px] font-bold uppercase tracking-[0.24em] text-[#d9b96d]">Here to help</p>
+                <h3 className="montserrat mt-2 text-2xl font-extrabold leading-snug sm:text-3xl">
+                  Still have a question?
                 </h3>
-
-                <p className="open-sans mt-3 text-sm leading-6 text-[#c4b5a5]">
-                  If you cannot find the information you're looking for,
-                  speak with us directly about your consultation.
+                <p className="open-sans mt-3 text-sm leading-7 text-[#d0c2b6]">
+                  Talk to us directly and get details about consultation options and appointment availability.
                 </p>
 
-                {/* Appointment */}
-                <div className="mt-7 pt-6 border-t border-white/10">
-
-                  <p className="text-[10px] tracking-[0.18em] font-bold text-[#c9a45b]">
-                    PERSONAL CONSULTATION
-                  </p>
-
-                  <p className="montserrat mt-2 text-lg font-bold text-white">
-                    {person_name}
-                  </p>
-
+                <div className="mt-7 flex items-center gap-3 border-t border-white/10 pt-6">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/5 ring-1 ring-white/10">
+                    <Star className="h-4 w-4 fill-[#d7b96e] text-[#d7b96e]" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#d7b96e]">Personal guidance</p>
+                    <p className="montserrat mt-1 truncate text-base font-bold text-[#fff8e9]">{person_name}</p>
+                  </div>
                 </div>
 
-                {/* Buttons */}
-                <div className="mt-6 space-y-3">
-
+                <div className="mt-7 grid gap-3">
                   <a
                     href={`tel:${phone_number}`}
-                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#8b1e1e] text-white text-sm font-bold hover:bg-[#a32727] transition-all"
+                    className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#a73535] to-[#812327] px-4 py-3 text-sm font-bold text-white shadow-lg shadow-black/15 transition duration-300 hover:-translate-y-0.5 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#e2c77d] focus:ring-offset-2 focus:ring-offset-[#241711]"
                   >
-                    <Phone className="w-4 h-4" />
-                    Call Us
+                    <Phone className="h-4 w-4" /> Call us
+                    <ArrowUpRight className="ml-auto h-4 w-4 opacity-70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
-
                   <a
                     href={`https://wa.me/${whatsapp_number}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-[#c9a45b]/40 text-[#e3c675] text-sm font-bold hover:bg-[#c9a45b]/10 transition-all"
+                    className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#d8b96f]/40 bg-white/[0.03] px-4 py-3 text-sm font-bold text-[#e8ce8d] transition duration-300 hover:-translate-y-0.5 hover:bg-[#d8b96f]/10 focus:outline-none focus:ring-2 focus:ring-[#e2c77d]"
                   >
-                    <MessageCircle className="w-4 h-4" />
-                    WhatsApp Us
+                    <MessageCircle className="h-4 w-4" /> WhatsApp us
+                    <ArrowUpRight className="ml-auto h-4 w-4 opacity-70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
-
                 </div>
-
+                <p className="mt-5 text-center text-[10px] tracking-wide text-white/40">Private enquiries · Appointment by request</p>
               </div>
-
             </div>
+          </aside>
 
-          </div>
-
-          {/* ================================= */}
-          {/* FAQ ACCORDION */}
-          {/* ================================= */}
-
-          <div className="space-y-3">
-
+          {/* FAQ accordion */}
+          <div className="space-y-3.5">
             {faqs.map((faq, index) => {
-
               const isOpen = openIndex === index;
-
+              const answerId = `faq-answer-${index}`;
               return (
-                <div
-                  key={index}
-                  className={`group rounded-2xl border overflow-hidden transition-all duration-300 ${
+                <article
+                  key={faq.question}
+                  className={`group overflow-hidden rounded-2xl border transition-all duration-300 ${
                     isOpen
-                      ? "bg-white border-[#c9a45b]/50 shadow-[0_10px_35px_rgba(52,35,22,0.10)]"
-                      : "bg-white/80 border-[#e2d7c6] hover:border-[#c9a45b]/40"
+                      ? "border-[#c6a45e]/65 bg-white shadow-[0_16px_42px_rgba(53,35,22,0.09)]"
+                      : "border-[#e8dfd2] bg-white/75 hover:border-[#c6a45e]/50 hover:bg-white hover:shadow-[0_8px_28px_rgba(53,35,22,0.05)]"
                   }`}
                 >
-
-                  {/* Question */}
                   <button
                     type="button"
                     onClick={() => toggleFAQ(index)}
                     aria-expanded={isOpen}
-                    className="w-full flex items-center gap-4 px-5 md:px-6 py-5 text-left"
+                    aria-controls={answerId}
+                    className="flex w-full items-center gap-4 px-4 py-5 text-left sm:px-6 sm:py-5"
                   >
-
-                    {/* Number */}
-                    <span
-                      className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
-                        isOpen
-                          ? "bg-[#8b1e1e] text-white"
-                          : "bg-[#f0e7d8] text-[#98702e]"
-                      }`}
-                    >
+                    <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-xs font-extrabold tracking-wide transition-colors ${isOpen ? "bg-[#8b292c] text-white" : "bg-[#f4ecdf] text-[#9b7636] group-hover:bg-[#efe1c8]"}`}>
                       {String(index + 1).padStart(2, "0")}
                     </span>
-
-                    {/* Question */}
-                    <span
-                      className={`flex-1 montserrat text-sm md:text-base font-bold transition-colors ${
-                        isOpen
-                          ? "text-[#8b1e1e]"
-                          : "text-[#302017]"
-                      }`}
-                    >
-                      {faq.question}
+                    <span className="min-w-0 flex-1">
+                      <span className={`mb-1 block text-[9px] font-bold uppercase tracking-[0.18em] ${isOpen ? "text-[#a27c39]" : "text-[#9b8b7c]"}`}>
+                        {faq.category}
+                      </span>
+                      <span className={`montserrat block text-sm font-bold leading-6 sm:text-base ${isOpen ? "text-[#84272a]" : "text-[#30221a]"}`}>
+                        {faq.question}
+                      </span>
                     </span>
-
-                    {/* Icon */}
-                    <span
-                      className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all ${
-                        isOpen
-                          ? "bg-[#8b1e1e] text-white"
-                          : "bg-[#f5efe5] text-[#8b1e1e]"
-                      }`}
-                    >
-                      {isOpen ? (
-                        <Minus className="w-4 h-4" />
-                      ) : (
-                        <Plus className="w-4 h-4" />
-                      )}
+                    <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen ? "rotate-180 bg-[#f4e8d4] text-[#8b292c]" : "bg-[#f8f4ed] text-[#8b292c] group-hover:bg-[#f0e4cf]"}`}>
+                      {isOpen ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
                     </span>
-
                   </button>
 
-                  {/* Answer */}
                   <div
-                    className={`grid transition-[grid-template-rows] duration-300 ${
-                      isOpen
-                        ? "grid-rows-[1fr]"
-                        : "grid-rows-[0fr]"
-                    }`}
+                    id={answerId}
+                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+                    aria-hidden={!isOpen}
                   >
-
                     <div className="overflow-hidden">
-
-                      <div className="px-5 md:px-6 pb-5 md:pl-[76px] md:pr-16">
-
-                        <div className="h-px bg-[#e9dfd0] mb-4" />
-
-                        <p className="open-sans text-sm md:text-[15px] leading-7 text-[#6c5d51]">
-                          {faq.answer}
-                        </p>
-
-                        {/* Contact-specific action */}
+                      <div className="ml-[4.25rem] mr-4 border-t border-[#eee5d9] pb-5 pt-4 sm:ml-[5.5rem] sm:mr-6 sm:pb-6">
+                        <p className="open-sans text-sm leading-7 text-[#716256] sm:text-[15px]">{faq.answer}</p>
                         {faq.type === "appointment" && (
                           <a
                             href={`https://wa.me/${whatsapp_number}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 mt-4 text-sm font-bold text-[#8b1e1e] hover:text-[#b17d2b] transition-colors"
+                            className="mt-4 inline-flex items-center gap-2 text-xs font-extrabold text-[#8b292c] transition-colors hover:text-[#a77c32] sm:text-sm"
                           >
-                            <MessageCircle className="w-4 h-4" />
-                            Ask About Appointments
+                            <MessageCircle className="h-4 w-4" /> Ask about appointments <ArrowUpRight className="h-3.5 w-3.5" />
                           </a>
                         )}
-
                         {faq.type === "phone" && (
                           <a
                             href={`tel:${phone_number}`}
-                            className="inline-flex items-center gap-2 mt-4 text-sm font-bold text-[#8b1e1e] hover:text-[#b17d2b] transition-colors"
+                            className="mt-4 inline-flex items-center gap-2 text-xs font-extrabold text-[#8b292c] transition-colors hover:text-[#a77c32] sm:text-sm"
                           >
-                            <Phone className="w-4 h-4" />
-                            Call for Consultation
+                            <Phone className="h-4 w-4" /> Call for consultation <ArrowUpRight className="h-3.5 w-3.5" />
                           </a>
                         )}
-
                       </div>
-
                     </div>
-
                   </div>
-
-                </div>
+                </article>
               );
             })}
-
+            <p className="px-2 pt-2 text-center text-xs leading-6 text-[#9a8b7c] sm:text-left">
+              Have a question that isn’t listed? Use the contact options and we’ll help you find the right information.
+            </p>
           </div>
-
         </div>
-
       </div>
     </section>
   );

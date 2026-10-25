@@ -1,3 +1,4 @@
+
 import {
   ArrowRight,
   Clock,
@@ -5,6 +6,10 @@ import {
   Phone,
   Sparkles,
   Star,
+  Compass,
+  Hand,
+  Heart,
+  ShieldCheck,
 } from "lucide-react";
 
 import {
@@ -12,379 +17,428 @@ import {
   phone_number,
 } from "../Genaral/secret";
 
+const problems = [
+  "ಸ್ತ್ರೀ-ಪುರುಷ ವಶೀಕರಣ",
+  "ಮದುವೆ ವಿಳಂಬ",
+  "ಸಂತಾನದೋಷ",
+  "ಡೈವೋರ್ಸ್ ಸಮಸ್ಯೆ",
+  "ಕೋರ್ಟ್ ಕೇಸ್",
+  "ಆರ್ಥಿಕ ಸಮಸ್ಯೆ",
+  "ಗಂಡ-ಹೆಂಡತಿ ಸಮಸ್ಯೆ",
+  "ಕುಟುಂಬ ಸಮಸ್ಯೆ",
+];
+
+const services = [
+  { title: "ಜ್ಯೋತಿಷ್ಯ", icon: Sparkles },
+  { title: "ಹಸ್ತ ರೇಖೆ", icon: Hand },
+  { title: "ವಾಸ್ತು", icon: Compass },
+  { title: "ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನ", icon: Star },
+];
+
+const kannadaFont = {
+  fontFamily: "'Noto Sans Kannada', sans-serif",
+};
+
 export default function KannadaAstrologerModern() {
-  const problems = [
-    "ಸ್ತ್ರೀ-ಪುರುಷ ವಶೀಕರಣ",
-    "ಮದುವೆ ವಿಳಂಬ",
-    "ಸಂತಾನದೋಷ",
-    "ಡೈವೋರ್ಸ್ ಸಮಸ್ಯೆ",
-    "ಕೋರ್ಟ್ ಕೇಸ್",
-    "ಆರ್ಥಿಕ ಸಮಸ್ಯೆ",
-    "ಗಂಡ-ಹೆಂಡತಿ ಸಮಸ್ಯೆ",
-    "ಕುಟುಂಬ ಸಮಸ್ಯೆ",
-  ];
-
-  const services = [
-    "ಜ್ಯೋತಿಷ್ಯ",
-    "ಹಸ್ತ ರೇಖೆ",
-    "ವಾಸ್ತು",
-    "ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನ",
-  ];
-
   return (
-    <section className="relative overflow-hidden bg-[#100817] py-16 md:py-24 px-4 sm:px-6">
+    <section className="relative overflow-hidden bg-[#faf7f0] px-4 py-16 text-[#2c1d14] sm:px-6 md:py-24">
 
-      {/* Background Glow */}
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-fuchsia-600/20 blur-[120px]" />
+      {/* BACKGROUND DECORATION */}
 
-      <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] rounded-full bg-amber-500/15 blur-[120px]" />
+      <div className="pointer-events-none absolute -right-40 top-0 h-[420px] w-[420px] rounded-full bg-[#d6b875]/10 blur-[100px]" />
 
-      <div className="absolute -bottom-40 left-1/3 w-[500px] h-[500px] rounded-full bg-purple-700/20 blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-40 -left-40 h-[450px] w-[450px] rounded-full bg-[#8b1e1e]/[0.05] blur-[100px]" />
 
-      {/* Pattern */}
       <div
-        className="absolute inset-0 opacity-[0.035] pointer-events-none"
+        className="pointer-events-none absolute inset-0 opacity-[0.035]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-          backgroundSize: "32px 32px",
+            "radial-gradient(#82663c 0.7px, transparent 0.7px)",
+          backgroundSize: "22px 22px",
         }}
       />
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative mx-auto max-w-7xl">
 
-        {/* ============================= */}
-        {/* TOP BADGE */}
-        {/* ============================= */}
+        {/* INTRODUCTION */}
 
-        <div className="flex justify-center mb-6">
+        <div className="mx-auto mb-12 max-w-4xl text-center md:mb-16">
 
-          <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/20 bg-white/[0.06] backdrop-blur-xl px-5 py-2 shadow-xl">
-
-            <Sparkles className="w-4 h-4 text-amber-300" />
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d7c29b] bg-white/80 px-5 py-2.5 shadow-sm">
+            <Sparkles className="h-4 w-4 text-[#a77c32]" />
 
             <span
-              className="text-xs sm:text-sm font-bold tracking-[0.15em] text-amber-200"
-              style={{
-                fontFamily: "'Noto Sans Kannada', sans-serif",
-              }}
+              style={kannadaFont}
+              className="text-xs font-semibold tracking-wide text-[#76572d] sm:text-sm"
             >
               ವಿಶೇಷ ಜ್ಯೋತಿಷ್ಯ ಮಾರ್ಗದರ್ಶನ
             </span>
-
           </div>
 
-        </div>
-
-        {/* ============================= */}
-        {/* HEADING */}
-        {/* ============================= */}
-
-        <div className="text-center max-w-4xl mx-auto">
+          <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-[#9a783e] sm:text-xs">
+            TRADITION · WISDOM · GUIDANCE
+          </p>
 
           <h2
-            className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight text-white"
-            style={{
-              fontFamily: "'Noto Sans Kannada', sans-serif",
-            }}
+            style={kannadaFont}
+            className="text-3xl font-bold leading-[1.55] tracking-tight text-[#302016] sm:text-4xl md:text-5xl lg:text-6xl"
           >
             ಕೇರಳದ ಮಾಂತ್ರಿಕ
           </h2>
 
           <h3
-            className="mt-2 text-3xl sm:text-4xl md:text-6xl font-black bg-gradient-to-r from-amber-200 via-yellow-400 to-orange-400 bg-clip-text text-transparent"
-            style={{
-              fontFamily: "'Noto Sans Kannada', sans-serif",
-            }}
+            style={kannadaFont}
+            className="mt-1 text-3xl font-bold leading-[1.6] text-[#986c2c] sm:text-4xl md:text-5xl lg:text-6xl"
           >
             ಜ್ಯೋತಿಷ್ಯರು
           </h3>
 
           <p
-            className="mt-5 text-xl sm:text-2xl md:text-3xl font-bold text-white/90"
-            style={{
-              fontFamily: "'Noto Sans Kannada', sans-serif",
-            }}
+            style={kannadaFont}
+            className="mt-5 text-lg font-semibold text-[#725234] sm:text-xl md:text-2xl"
           >
             {person_name}
           </p>
 
-          {/* Gold Divider */}
-          <div className="flex items-center justify-center gap-3 my-6">
-
-            <span className="w-16 md:w-24 h-px bg-gradient-to-r from-transparent to-amber-400" />
-
-            <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-
-            <span className="w-16 md:w-24 h-px bg-gradient-to-l from-transparent to-amber-400" />
-
+          <div className="my-6 flex items-center justify-center gap-3">
+            <span className="h-px w-14 bg-gradient-to-r from-transparent to-[#c5a15d] sm:w-24" />
+            <Star className="h-4 w-4 fill-[#c5a15d] text-[#c5a15d]" />
+            <span className="h-px w-14 bg-gradient-to-l from-transparent to-[#c5a15d] sm:w-24" />
           </div>
 
-          <p className="text-sm md:text-lg text-white/60 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-sm leading-7 text-[#786b5d] sm:text-base sm:leading-8">
             Traditional astrology, spiritual guidance and personalized
-            solutions for life's important concerns.
+            consultations for life’s important concerns.
           </p>
-
         </div>
 
-        {/* ============================= */}
-        {/* MAIN CARDS */}
-        {/* ============================= */}
+        {/* MAIN CONTENT */}
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 items-stretch">
+        <div className="grid items-stretch gap-6 lg:grid-cols-[0.82fr_1.18fr]">
 
-          {/* ============================= */}
-          {/* PROFILE CARD */}
-          {/* ============================= */}
+          {/* ASTROLOGER PROFILE */}
 
-          <div className="relative overflow-hidden rounded-[30px] border border-white/10 bg-gradient-to-br from-white/[0.10] to-white/[0.03] backdrop-blur-xl p-7 md:p-9 shadow-2xl">
+          <div className="relative overflow-hidden rounded-[28px] bg-[#261910] p-7 text-[#fff5df] shadow-[0_20px_60px_rgba(48,29,14,0.14)] sm:p-9 md:rounded-[32px]">
 
-            <div className="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-amber-400/10 blur-3xl" />
+            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-[#d1af69]/10" />
+            <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full border border-[#d1af69]/10" />
 
             <div className="relative">
 
-              {/* Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-300 to-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/20">
-
-                <Sparkles className="w-8 h-8 text-[#24120a]" />
-
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#d4b16c]/40 bg-[#d4b16c]/10">
+                <Sparkles className="h-7 w-7 text-[#e3c783]" />
               </div>
 
-              <p className="mt-7 text-xs tracking-[0.2em] text-amber-300 font-bold">
-                ASTROLOGER
+              <p className="mt-8 text-[10px] font-bold uppercase tracking-[0.25em] text-[#d9b975]">
+                ASTROLOGER PROFILE
               </p>
 
               <h3
-                className="mt-2 text-3xl md:text-4xl font-black text-white"
-                style={{
-                  fontFamily: "'Noto Sans Kannada', sans-serif",
-                }}
+                style={kannadaFont}
+                className="mt-3 break-words text-2xl font-bold leading-relaxed text-[#fff5df] sm:text-3xl"
               >
                 {person_name}
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-white/60">
-                Traditional spiritual and astrological guidance with
-                personalized consultation.
+              <p
+                style={kannadaFont}
+                className="mt-3 text-sm leading-8 text-[#e2d4c1]/80"
+              >
+                ಸಾಂಪ್ರದಾಯಿಕ ಜ್ಯೋತಿಷ್ಯ ಮತ್ತು ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನದ ಮೂಲಕ
+                ಜೀವನದ ಪ್ರಮುಖ ವಿಷಯಗಳ ಕುರಿತು ವೈಯಕ್ತಿಕ ಸಮಾಲೋಚನೆ.
               </p>
 
-              {/* Phone */}
-              <a
-                href={`tel:${phone_number}`}
-                className="mt-7 flex items-center gap-4 rounded-2xl bg-white/[0.06] border border-white/10 p-4 hover:bg-white/[0.10] transition"
-              >
+              {/* EXPERIENCE BADGE */}
 
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-fuchsia-500 to-purple-600 flex items-center justify-center shrink-0">
-
-                  <Phone className="w-5 h-5 text-white" />
-
+              <div className="mt-6 flex items-center gap-3 rounded-2xl border border-[#d4b16c]/20 bg-white/[0.04] p-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#d4b16c]/10">
+                  <Star className="h-5 w-5 text-[#e3c783]" />
                 </div>
 
                 <div>
+                  <p className="font-serif text-xl font-bold text-[#e6c982]">
+                    Since 1956
+                  </p>
+                  <p className="mt-1 text-xs text-[#d6c6b0]">
+                    Traditional astrology & spiritual guidance
+                  </p>
+                </div>
+              </div>
 
-                  <p className="text-xs text-white/50">
+              {/* PHONE NUMBER */}
+
+              <a
+                href={`tel:${phone_number}`}
+                className="mt-6 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.05] p-4 transition-colors hover:border-[#d4b16c]/50 hover:bg-white/[0.08]"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#d4b16c] text-[#261910]">
+                  <Phone className="h-5 w-5" />
+                </div>
+
+                <div className="min-w-0">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#d5b876]">
                     CONSULTATION
                   </p>
 
-                  <p className="text-lg font-bold text-white tracking-wide">
+                  <p className="mt-1 break-all text-base font-bold text-white sm:text-lg">
                     {phone_number}
                   </p>
-
                 </div>
 
+                <ArrowRight className="ml-auto h-5 w-5 shrink-0 text-[#d5b876]" />
               </a>
 
-              {/* CTA */}
+              {/* CALL CTA */}
+
               <a
                 href={`tel:${phone_number}`}
-                className="mt-5 flex items-center justify-center gap-2 w-full rounded-2xl bg-gradient-to-r from-amber-400 via-orange-400 to-red-500 py-3.5 text-sm font-black text-[#24120a] shadow-lg shadow-orange-500/20 hover:scale-[1.02] transition"
+                className="mt-4 flex min-h-[52px] w-full items-center justify-center gap-3 rounded-full bg-[#d4b16c] px-5 py-3 text-sm font-bold text-[#261910] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#e6cb8c] hover:shadow-lg"
               >
+                <Phone className="h-4 w-4" />
 
-                <Phone className="w-4 h-4" />
+                <span style={kannadaFont}>ಸಂಪರ್ಕಿಸಿ</span>
 
-                ಸಂಪರ್ಕಿಸಿ
-
-                <ArrowRight className="w-4 h-4" />
-
+                <ArrowRight className="h-4 w-4" />
               </a>
 
+              <p className="mt-5 text-center text-xs leading-6 text-[#b9a58b]">
+                Personal consultations for your questions and concerns.
+              </p>
             </div>
-
           </div>
 
-          {/* ============================= */}
-          {/* INFORMATION CARD */}
-          {/* ============================= */}
+          {/* ABOUT & PROBLEMS */}
 
-          <div className="rounded-[30px] border border-white/10 bg-white/[0.045] backdrop-blur-xl p-7 md:p-9 shadow-2xl">
+          <div className="rounded-[28px] border border-[#e6dac5] bg-white p-6 shadow-[0_12px_45px_rgba(48,29,14,0.045)] sm:p-8 md:rounded-[32px] md:p-9">
 
-            <div
-              className="text-base sm:text-lg md:text-xl leading-[1.9] text-white/75"
-              style={{
-                fontFamily: "'Noto Sans Kannada', sans-serif",
-              }}
-            >
+            <div className="flex items-start gap-4">
 
-              <p>
-                ಚಿತ್ರದುರ್ಗದಲ್ಲಿ ಖಾಯಂಯಾಗಿ ನೆಲೆಸಿದ್ದಾರೆ. ಹಸ್ತ, ರಾಶಿ,
-                ಮುಖ ಲಕ್ಷಣ, ಜಾತಕ ಮತ್ತು ಕುಂಡಲಿ ಆಧಾರದ ಮೇಲೆ
-                ಜೀವನದ ಪ್ರಮುಖ ವಿಷಯಗಳ ಕುರಿತು ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆ.
-              </p>
-
-              {/* Problems */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-7">
-
-                {problems.map((item) => (
-
-                  <div
-                    key={item}
-                    className="flex items-center gap-3 rounded-xl border border-amber-300/10 bg-amber-300/[0.04] px-4 py-3"
-                  >
-
-                    <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
-
-                    <p className="text-sm md:text-base text-white">
-                      {item}
-                    </p>
-
-                  </div>
-
-                ))}
-
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f4ecdd]">
+                <Sparkles className="h-5 w-5 text-[#9b7335]" />
               </div>
 
-              {/* Highlight */}
-              <div className="rounded-2xl border border-fuchsia-400/20 bg-gradient-to-r from-fuchsia-500/[0.08] to-purple-500/[0.08] p-5 text-center">
-
-                <Sparkles className="w-5 h-5 text-amber-300 mx-auto mb-3" />
-
-                <p>
-                  ನಿಮ್ಮ ಯಾವುದೇ ಸಮಸ್ಯೆಗಳ ಕುರಿತು ವೈಯಕ್ತಿಕ
-                  ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನಕ್ಕಾಗಿ ಸಂಪರ್ಕಿಸಿ.
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#a17c41]">
+                  ABOUT THE CONSULTATION
                 </p>
 
+                <h3
+                  style={kannadaFont}
+                  className="mt-2 text-xl font-bold leading-relaxed text-[#302016] sm:text-2xl"
+                >
+                  ನಿಮ್ಮ ಸಮಸ್ಯೆಗಳಿಗೆ ವೈಯಕ್ತಿಕ ಮಾರ್ಗದರ್ಶನ
+                </h3>
+              </div>
+            </div>
+
+            <p
+              style={kannadaFont}
+              className="mt-6 text-sm leading-8 text-[#74675a] sm:text-base sm:leading-9"
+            >
+              ಚಿತ್ರದುರ್ಗದಲ್ಲಿ ಖಾಯಂಯಾಗಿ ನೆಲೆಸಿದ್ದಾರೆ. ಹಸ್ತ, ರಾಶಿ,
+              ಮುಖ ಲಕ್ಷಣ, ಜಾತಕ ಮತ್ತು ಕುಂಡಲಿ ಆಧಾರದ ಮೇಲೆ ಜೀವನದ ಪ್ರಮುಖ
+              ವಿಷಯಗಳ ಕುರಿತು ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆ.
+            </p>
+
+            {/* PROBLEMS */}
+
+            <div className="mt-7">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="h-px w-7 bg-[#c5a15d]" />
+
+                <h4
+                  style={kannadaFont}
+                  className="text-sm font-bold text-[#55402a]"
+                >
+                  ಸಲಹೆ ಪಡೆಯಬಹುದಾದ ವಿಷಯಗಳು
+                </h4>
               </div>
 
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {problems.map((item) => (
+                  <div
+                    key={item}
+                    className="group flex min-h-[54px] items-center gap-3 rounded-xl border border-[#eae0cf] bg-[#fcfaf6] px-4 py-3 transition-all duration-200 hover:border-[#d1b779] hover:bg-[#f7f0e3]"
+                  >
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#eee2c9]">
+                      <ArrowRight className="h-3 w-3 text-[#916c31] transition-transform group-hover:translate-x-0.5" />
+                    </span>
+
+                    <span
+                      style={kannadaFont}
+                      className="text-sm font-medium leading-6 text-[#49382a]"
+                    >
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
 
+            {/* HIGHLIGHT */}
+
+            <div className="mt-7 rounded-2xl border border-[#e5d5b5] bg-[#f8f2e6] p-5 sm:p-6">
+              <div className="flex items-start gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white shadow-sm">
+                  <Heart className="h-5 w-5 text-[#987039]" />
+                </div>
+
+                <div>
+                  <p
+                    style={kannadaFont}
+                    className="text-sm font-bold leading-7 text-[#594126]"
+                  >
+                    ನಿಮ್ಮ ಸಮಸ್ಯೆಗಳ ಕುರಿತು ವೈಯಕ್ತಿಕ ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನಕ್ಕಾಗಿ ಸಂಪರ್ಕಿಸಿ.
+                  </p>
+
+                  <p className="mt-2 text-xs leading-6 text-[#88755c]">
+                    Speak directly to discuss your consultation needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* SERVICES */}
+
+        <div className="mt-14 md:mt-16">
+
+          <div className="mb-7 text-center">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#a17c41]">
+              OUR SERVICES
+            </p>
+
+            <h3
+              style={kannadaFont}
+              className="mt-3 text-2xl font-bold text-[#302016] sm:text-3xl"
+            >
+              ನಮ್ಮ ಸೇವೆಗಳು
+            </h3>
+
+            <p className="mt-3 text-sm text-[#887969]">
+              Traditional services and personalized consultations
+            </p>
           </div>
 
-        </div>
-
-        {/* ============================= */}
-        {/* SERVICES */}
-        {/* ============================= */}
-
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
-
-          {services.map((item) => (
-
-            <div
-              key={item}
-              className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-center hover:bg-white/[0.08] transition"
-            >
-
-              <p
-                className="text-sm md:text-base font-semibold text-white/70"
-                style={{
-                  fontFamily: "'Noto Sans Kannada', sans-serif",
-                }}
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
+            {services.map(({ title, icon: Icon }) => (
+              <div
+                key={title}
+                className="group rounded-2xl border border-[#e7dcc9] bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#c9ad70] hover:shadow-[0_12px_30px_rgba(48,29,14,0.08)] sm:rounded-3xl sm:p-7"
               >
-                {item}
-              </p>
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f5edde] transition-colors group-hover:bg-[#e9d7b3] sm:h-14 sm:w-14">
+                  <Icon className="h-5 w-5 text-[#92703b] sm:h-6 sm:w-6" />
+                </div>
 
-            </div>
-
-          ))}
-
+                <p
+                  style={kannadaFont}
+                  className="mt-4 text-sm font-semibold leading-7 text-[#49382a] sm:text-base"
+                >
+                  {title}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* ============================= */}
-        {/* LOCATION + TIME */}
-        {/* ============================= */}
+        {/* LOCATION & HOURS */}
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
 
-          {/* Location */}
+          {/* LOCATION */}
 
-          <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-5 flex items-start gap-4">
-
-            <div className="w-11 h-11 rounded-xl bg-purple-500/15 flex items-center justify-center shrink-0">
-
-              <MapPin className="w-5 h-5 text-fuchsia-300" />
-
+          <div className="flex items-start gap-4 rounded-2xl border border-[#e7dcc9] bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f4ecdd]">
+              <MapPin className="h-5 w-5 text-[#92703b]" />
             </div>
 
-            <div>
-
-              <p className="text-xs tracking-widest text-white/40 font-bold">
-                ADDRESS
+            <div className="min-w-0">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#a17c41]">
+                OUR LOCATION
               </p>
 
+              <h4
+                style={kannadaFont}
+                className="mt-2 text-base font-bold text-[#302016]"
+              >
+                ವಿಳಾಸ
+              </h4>
+
               <p
-                className="mt-2 text-sm md:text-base leading-6 text-white/70"
-                style={{
-                  fontFamily: "'Noto Sans Kannada', sans-serif",
-                }}
+                style={kannadaFont}
+                className="mt-2 text-sm leading-8 text-[#74675a]"
               >
                 ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ ಕೆಳಗೆ, ಚರ್ಚ್ ರಸ್ತೆ,
                 ವಾಸವಿ ಲ್ಯಾಬ್ ಹತ್ತಿರ,
                 ಮಂಜುನಾಥ ಫ್ಲೋರ್ ಮಿಲ್ ಪಕ್ಕ,
                 ಚಿತ್ರದುರ್ಗ.
               </p>
-
             </div>
-
           </div>
 
-          {/* Timing */}
+          {/* CONSULTATION HOURS */}
 
-          <div className="rounded-2xl border border-white/10 bg-white/[0.045] p-5 flex items-start gap-4">
-
-            <div className="w-11 h-11 rounded-xl bg-amber-400/10 flex items-center justify-center shrink-0">
-
-              <Clock className="w-5 h-5 text-amber-300" />
-
+          <div className="flex items-start gap-4 rounded-2xl border border-[#e7dcc9] bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f4ecdd]">
+              <Clock className="h-5 w-5 text-[#92703b]" />
             </div>
 
             <div>
-
-              <p className="text-xs tracking-widest text-white/40 font-bold">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#a17c41]">
                 CONSULTATION HOURS
               </p>
 
+              <h4
+                style={kannadaFont}
+                className="mt-2 text-base font-bold text-[#302016]"
+              >
+                ಸಂಪರ್ಕ ಸಮಯ
+              </h4>
+
               <p
-                className="mt-2 text-sm md:text-base text-white/70"
-                style={{
-                  fontFamily: "'Noto Sans Kannada', sans-serif",
-                }}
+                style={kannadaFont}
+                className="mt-2 text-sm leading-8 text-[#74675a]"
               >
                 ಬೆಳಿಗ್ಗೆ 8:00 ರಿಂದ ರಾತ್ರಿ 8:00 ರವರೆಗೆ
               </p>
 
+              <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#f4ecdd] px-3 py-2 text-xs font-medium text-[#76572d]">
+                <ShieldCheck className="h-4 w-4" />
+                <span style={kannadaFont}>ಬರುವ ಮುನ್ನ ಕರೆ ಮಾಡಿ</span>
+              </div>
             </div>
-
           </div>
-
         </div>
 
-        {/* Bottom */}
+        {/* BOTTOM CTA */}
 
-        <div className="text-center mt-8">
+        <div className="mt-10 overflow-hidden rounded-[28px] bg-[#261910] px-6 py-8 text-center shadow-[0_15px_45px_rgba(48,29,14,0.12)] sm:px-10 sm:py-10">
 
-          <p
-            className="text-xs md:text-sm text-white/35"
-            style={{
-              fontFamily: "'Noto Sans Kannada', sans-serif",
-            }}
+          <Sparkles className="mx-auto h-6 w-6 text-[#d4b16c]" />
+
+          <h3
+            style={kannadaFont}
+            className="mt-4 text-xl font-bold leading-relaxed text-[#fff3d8] sm:text-2xl"
           >
-            ಬರುವ ಮುನ್ನ ಕರೆ ಮಾಡಿ
+            ವೈಯಕ್ತಿಕ ಸಮಾಲೋಚನೆಗಾಗಿ ಸಂಪರ್ಕಿಸಿ
+          </h3>
+
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-[#c8b69d]">
+            Get in touch to discuss your questions and learn more about the available services.
           </p>
 
+          <a
+            href={`tel:${phone_number}`}
+            className="mt-6 inline-flex min-h-[50px] items-center justify-center gap-3 rounded-full bg-[#d4b16c] px-7 py-3 text-sm font-bold text-[#261910] transition-all hover:-translate-y-0.5 hover:bg-[#e6cb8c]"
+          >
+            <Phone className="h-4 w-4" />
+            ಸಂಪರ್ಕಿಸಿ
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
 
       </div>
-
     </section>
   );
 }

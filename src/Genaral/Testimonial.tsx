@@ -1,10 +1,4 @@
-import {
-  Quote,
-  Star,
-  MapPin,
-  Sparkles,
-  MessageCircle,
-} from "lucide-react";
+import { Quote, Star, MapPin, Sparkles, MessageCircle } from "lucide-react";
 import { person_name, whatsapp_number } from "./secret";
 
 const testimonials = [
@@ -93,223 +87,110 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative overflow-hidden bg-[#21140e] py-16 md:py-24 px-5">
+    <section className="relative isolate overflow-hidden bg-[#160f0c] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      {/* Ambient light + subtle celestial texture */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -left-40 top-10 h-96 w-96 rounded-full bg-[#9d6b2f]/15 blur-[120px]" />
+        <div className="absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-[#7d2525]/20 blur-[130px]" />
+        <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(#e8c77c_0.7px,transparent_0.7px)] [background-size:22px_22px]" />
+        <div className="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d9b66b]/50 to-transparent" />
+      </div>
 
-      {/* ======================================== */}
-      {/* BACKGROUND DECORATION */}
-      {/* ======================================== */}
-
-      <div className="absolute -top-52 -right-52 w-[600px] h-[600px] rounded-full bg-[#c9a45b]/8 blur-3xl" />
-
-      <div className="absolute -bottom-52 -left-52 w-[600px] h-[600px] rounded-full bg-[#8b1e1e]/10 blur-3xl" />
-
-      <div className="absolute top-24 left-[5%] hidden lg:block w-28 h-28 rounded-full border border-[#c9a45b]/15" />
-
-      <div className="absolute bottom-24 right-[5%] hidden lg:block w-20 h-20 rounded-full border border-[#c9a45b]/15" />
-
-      <div className="relative z-10 max-w-[1400px] mx-auto">
-
-        {/* ======================================== */}
-        {/* HEADER */}
-        {/* ======================================== */}
-
-        <div className="max-w-3xl mx-auto text-center">
-
-          <div className="flex items-center justify-center gap-2 mb-4">
-
-            <Sparkles className="w-4 h-4 text-[#dfbd6b]" />
-
-            <span className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#d5b260]">
-              CLIENT EXPERIENCES
-            </span>
-
-            <Sparkles className="w-4 h-4 text-[#dfbd6b]" />
-
+      <div className="relative mx-auto max-w-[1320px]">
+        {/* Section introduction */}
+        <header className="mx-auto mb-14 max-w-3xl text-center sm:mb-16">
+          <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#d9b66b]/25 bg-white/[0.035] px-4 py-2 backdrop-blur-sm">
+            <Sparkles className="h-4 w-4 text-[#e6c77f]" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#e6c77f] sm:text-xs">Stories of trust</span>
+            <Sparkles className="h-4 w-4 text-[#e6c77f]" />
           </div>
-
-          <h2 className="montserrat text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#fff8e9] leading-tight">
-
-            Words From People
-            <span className="block text-[#e1be68]">
-              We've Guided
-            </span>
-
+          <h2 className="montserrat text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#fff8ec] sm:text-5xl md:text-6xl">
+            Real words. <span className="block bg-gradient-to-r from-[#f4dfaa] via-[#c99b4d] to-[#f0d99b] bg-clip-text text-transparent">Personal journeys.</span>
           </h2>
-
-          <div className="flex items-center justify-center gap-3 my-6">
-
-            <span className="w-16 h-px bg-[#c9a45b]" />
-
-            <span className="w-2 h-2 rotate-45 bg-[#c9a45b]" />
-
-            <span className="w-16 h-px bg-[#c9a45b]" />
-
+          <div className="mx-auto my-7 flex items-center justify-center gap-3">
+            <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#c9a45b] sm:w-20" />
+            <span className="h-2 w-2 rotate-45 border border-[#e3c477] bg-[#c9a45b]/40" />
+            <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#c9a45b] sm:w-20" />
           </div>
-
-          <p className="open-sans text-sm md:text-base leading-7 text-[#c8b9aa]">
-            Read experiences shared by people who sought personal,
-            relationship, family, career and spiritual guidance.
+          <p className="open-sans mx-auto max-w-2xl text-sm leading-7 text-[#c7b9a8] sm:text-base sm:leading-8">
+            Explore experiences from people who came seeking clarity, perspective and spiritual guidance through life’s important moments.
           </p>
+        </header>
 
-        </div>
-
-        {/* ======================================== */}
-        {/* TESTIMONIAL GRID */}
-        {/* ======================================== */}
-
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-
+        {/* Testimonial collection */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <article
               key={`${testimonial.name}-${index}`}
-              className={`group relative overflow-hidden rounded-[26px] border border-[#d2b56d]/15 bg-[#faf7f0] p-6 md:p-7 shadow-[0_15px_45px_rgba(0,0,0,0.20)] hover:-translate-y-2 hover:border-[#d2b56d]/40 hover:shadow-[0_22px_55px_rgba(0,0,0,0.28)] transition-all duration-500 ${
-                index === 0
-                  ? "lg:col-span-2"
-                  : ""
-              }`}
+              className={`group relative flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-white/[0.09] bg-gradient-to-br from-[#fffaf0] to-[#f1e8d8] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-1.5 hover:border-[#d2ae62]/70 hover:shadow-[0_24px_65px_rgba(0,0,0,0.3)] sm:p-7 ${index === 0 ? "sm:col-span-2 xl:col-span-2" : ""}`}
             >
-
-              {/* Gold top line */}
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#c9a45b] to-transparent opacity-70" />
-
-              {/* Large Quote */}
-              <div className="absolute top-5 right-6">
-
-                <Quote
-                  className="w-12 h-12 text-[#d7c49c]/45 group-hover:text-[#c9a45b]/50 transition-colors"
-                  strokeWidth={1.5}
-                />
-
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#c6a052] to-transparent opacity-80" />
+              <div className="absolute -right-5 -top-7 h-28 w-28 rounded-full border border-[#a77e36]/10 transition duration-500 group-hover:scale-110" />
+              <div className="absolute right-6 top-5 text-[#c8a75d]/30 transition-colors duration-300 group-hover:text-[#b58a3d]/55">
+                <Quote className="h-10 w-10 sm:h-12 sm:w-12" strokeWidth={1.4} />
               </div>
 
-              {/* ================================= */}
-              {/* USER */}
-              {/* ================================= */}
-
-              <div className="flex items-center gap-4">
-
-                <div className="relative shrink-0">
-
-                  <div className="w-16 h-16 rounded-full p-[2px] bg-[#c9a45b]">
-
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      loading="lazy"
-                      className="w-full h-full rounded-full object-cover"
-                    />
-
-                  </div>
-
-                  {/* Online indicator */}
-                  <div className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-[#8b1e1e] border-2 border-[#faf7f0]" />
-
-                </div>
-
-                <div>
-
-                  <h3 className="montserrat text-base font-extrabold text-[#2c1a11]">
-                    {testimonial.name}
-                  </h3>
-
-                  <div className="flex items-center gap-1 mt-1">
-
-                    <MapPin className="w-3 h-3 text-[#a27a32]" />
-
-                    <span className="text-xs text-[#85766a]">
-                      {testimonial.location}
-                    </span>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              {/* ================================= */}
-              {/* STARS */}
-              {/* ================================= */}
-
-              <div className="flex items-center gap-0.5 mt-5">
-
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    className="w-3.5 h-3.5 fill-[#c49b48] text-[#c49b48]"
+              <div className="relative flex items-center gap-3.5 pr-9">
+                <div className="relative shrink-0 rounded-2xl bg-gradient-to-br from-[#e5c879] via-[#b98c3d] to-[#785221] p-[2px] shadow-md">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    loading="lazy"
+                    className="h-[3.65rem] w-[3.65rem] rounded-[0.85rem] bg-[#e8dfcf] object-cover sm:h-16 sm:w-16"
                   />
-                ))}
-
+                </div>
+                <div className="min-w-0">
+                  <h3 className="montserrat truncate text-sm font-bold tracking-[-0.01em] text-[#281a12] sm:text-base">{testimonial.name}</h3>
+                  <div className="mt-1.5 flex items-center gap-1.5 text-xs text-[#796b5b]">
+                    <MapPin className="h-3.5 w-3.5 text-[#a77c31]" />
+                    <span>{testimonial.location}</span>
+                  </div>
+                </div>
               </div>
 
-              {/* ================================= */}
-              {/* TEXT */}
-              {/* ================================= */}
+              <div className="relative mt-5 flex items-center gap-1" aria-label="5 out of 5 stars">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="h-3.5 w-3.5 fill-[#bd913c] text-[#bd913c]" />
+                ))}
+                <span className="ml-2 text-[9px] font-bold uppercase tracking-[0.18em] text-[#8d6b2e]">Client reflection</span>
+              </div>
 
-              <p
-                className={`mt-4 open-sans text-[14px] leading-7 text-[#62564c] ${
-                  index === 0
-                    ? "lg:text-[15px] lg:leading-8"
-                    : ""
-                }`}
-              >
+              <p className={`relative mt-4 flex-1 font-serif text-[15px] leading-7 text-[#514338] sm:text-base sm:leading-8 ${index === 0 ? "xl:text-[17px]" : ""}`}>
                 “{testimonial.text}”
               </p>
 
-              {/* ================================= */}
-              {/* FOOTER */}
-              {/* ================================= */}
-
-              <div className="mt-6 pt-4 border-t border-[#e4d9c8] flex items-center justify-between">
-
-                <span className="text-[9px] tracking-[0.18em] font-bold text-[#a17a37]">
-                  VERIFIED EXPERIENCE
-                </span>
-
-                <span className="w-7 h-[2px] bg-[#c9a45b]" />
-
+              <div className="relative mt-6 flex items-center justify-between border-t border-[#d9cbb4] pt-4">
+                <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#8b6a31]">A shared experience</span>
+                <span className="h-px w-9 bg-gradient-to-r from-[#c8a154] to-transparent transition-all duration-300 group-hover:w-14" />
               </div>
-
             </article>
           ))}
-
         </div>
 
-        {/* ======================================== */}
-        {/* BOTTOM CTA */}
-        {/* ======================================== */}
-
-        <div className="mt-12 flex justify-center">
-
-          <div className="flex flex-col sm:flex-row items-center gap-5 bg-[#2b1a12] border border-[#c9a45b]/20 rounded-2xl px-6 md:px-8 py-5 shadow-xl">
-
-            <div className="text-center sm:text-left">
-
-              <p className="montserrat text-base font-bold text-[#fff8e9]">
-                Looking for personal guidance?
-              </p>
-
-              <p className="text-xs text-[#b9aa9b] mt-1">
-                Speak with us privately about your concerns.
-              </p>
-
+        {/* Contact panel */}
+        <div className="relative mt-12 overflow-hidden rounded-[1.75rem] border border-[#d6b66b]/25 bg-gradient-to-br from-[#302018] via-[#241711] to-[#19110d] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.25)] sm:mt-16 sm:p-8 lg:p-10">
+          <div aria-hidden="true" className="absolute -right-12 -top-24 h-64 w-64 rounded-full border border-[#d6b66b]/10 sm:h-80 sm:w-80" />
+          <div aria-hidden="true" className="absolute -right-2 -top-14 h-52 w-52 rounded-full border border-[#d6b66b]/10 sm:h-64 sm:w-64" />
+          <div className="relative flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
+            <div className="max-w-xl">
+              <span className="mb-3 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#dfbf77]">
+                <Sparkles className="h-3.5 w-3.5" /> Your next step starts here
+              </span>
+              <h3 className="montserrat text-2xl font-semibold tracking-[-0.03em] text-[#fff7e9] sm:text-3xl">Looking for personal guidance?</h3>
+              <p className="mt-2 text-sm leading-6 text-[#c8b7a5]">Start a private conversation and share what’s on your mind.</p>
             </div>
-
             <a
               href={`https://wa.me/${whatsapp_number}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#8b1e1e] text-white text-sm font-bold hover:bg-[#a42828] hover:-translate-y-0.5 transition-all"
+              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-[#d8b765] to-[#b98b3b] px-6 py-3 text-sm font-bold text-[#24170e] shadow-[0_8px_24px_rgba(190,147,62,0.18)] transition duration-300 hover:-translate-y-0.5 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#f1d998] focus:ring-offset-2 focus:ring-offset-[#241711]"
             >
-              <MessageCircle className="w-4 h-4" />
-              Start a Conversation
+              <MessageCircle className="h-4 w-4" />
+              Chat on WhatsApp
             </a>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }

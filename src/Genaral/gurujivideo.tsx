@@ -99,27 +99,7 @@ export default function GurujiVideo() {
 
   <div className="relative overflow-hidden rounded-[26px] bg-black shadow-[0_25px_70px_rgba(0,0,0,0.45)]">
 
-    <video
-      controls
-      playsInline
-      preload="metadata"
-      className="
-        w-full
-        max-w-[420px]
-        h-auto
-        aspect-[9/16]
-        object-cover
-        rounded-[26px]
-      "
-     
-    >
-      <source
-        src="/guruji-video.mp4"
-        type="video/mp4"
-      />
-
-      Your browser does not support the video tag.
-    </video>
+   <img src="https://i.pinimg.com/736x/af/a3/64/afa364ecc09f57c3d0a978bd8218cd0a.jpg" alt=""  />
 
     {/* Top label */}
 
