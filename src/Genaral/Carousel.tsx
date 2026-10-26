@@ -26,7 +26,7 @@ const slides = [
 
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
+    loop: true,  
     align: "start",
     skipSnaps: false,
   });

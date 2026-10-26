@@ -1,15 +1,12 @@
 
 import {
   ArrowRight,
-  Clock,
-  MapPin,
   Phone,
   Sparkles,
   Star,
   Compass,
   Hand,
   Heart,
-  ShieldCheck,
 } from "lucide-react";
 
 import {
@@ -342,74 +339,7 @@ export default function KannadaAstrologerModern() {
           </div>
         </div>
 
-        {/* LOCATION & HOURS */}
-
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-
-          {/* LOCATION */}
-
-          <div className="flex items-start gap-4 rounded-2xl border border-[#e7dcc9] bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f4ecdd]">
-              <MapPin className="h-5 w-5 text-[#92703b]" />
-            </div>
-
-            <div className="min-w-0">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#a17c41]">
-                OUR LOCATION
-              </p>
-
-              <h4
-                style={kannadaFont}
-                className="mt-2 text-base font-bold text-[#302016]"
-              >
-                ವಿಳಾಸ
-              </h4>
-
-              <p
-                style={kannadaFont}
-                className="mt-2 text-sm leading-8 text-[#74675a]"
-              >
-                ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ ಕೆಳಗೆ, ಚರ್ಚ್ ರಸ್ತೆ,
-                ವಾಸವಿ ಲ್ಯಾಬ್ ಹತ್ತಿರ,
-                ಮಂಜುನಾಥ ಫ್ಲೋರ್ ಮಿಲ್ ಪಕ್ಕ,
-                ಚಿತ್ರದುರ್ಗ.
-              </p>
-            </div>
-          </div>
-
-          {/* CONSULTATION HOURS */}
-
-          <div className="flex items-start gap-4 rounded-2xl border border-[#e7dcc9] bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f4ecdd]">
-              <Clock className="h-5 w-5 text-[#92703b]" />
-            </div>
-
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#a17c41]">
-                CONSULTATION HOURS
-              </p>
-
-              <h4
-                style={kannadaFont}
-                className="mt-2 text-base font-bold text-[#302016]"
-              >
-                ಸಂಪರ್ಕ ಸಮಯ
-              </h4>
-
-              <p
-                style={kannadaFont}
-                className="mt-2 text-sm leading-8 text-[#74675a]"
-              >
-                ಬೆಳಿಗ್ಗೆ 8:00 ರಿಂದ ರಾತ್ರಿ 8:00 ರವರೆಗೆ
-              </p>
-
-              <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#f4ecdd] px-3 py-2 text-xs font-medium text-[#76572d]">
-                <ShieldCheck className="h-4 w-4" />
-                <span style={kannadaFont}>ಬರುವ ಮುನ್ನ ಕರೆ ಮಾಡಿ</span>
-              </div>
-            </div>
-          </div>
-        </div>
+     
 
         {/* BOTTOM CTA */}
 
