@@ -1,4 +1,3 @@
-
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import {
@@ -21,12 +20,12 @@ const slides = [
     subtitle: "Traditional Astrology & Spiritual Guidance",
     description:
       "Traditional guidance for relationships, marriage, career, family and important life decisions.",
-  }
+  },
 ];
 
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,  
+    loop: true,
     align: "start",
     skipSnaps: false,
   });
@@ -46,7 +45,7 @@ export default function Carousel() {
     (index: number) => {
       emblaApi?.scrollTo(index);
     },
-    [emblaApi]
+    [emblaApi],
   );
 
   /* ACTIVE SLIDE */
@@ -120,36 +119,41 @@ export default function Carousel() {
 
               <div className="absolute inset-0 bg-black/35" />
 
-              <div className="absolute inset-0 bg-gradient-to-r
+              <div
+                className="absolute inset-0 bg-gradient-to-r
                 from-[#170c07]/95 via-[#21150f]/75
                 to-[#21150f]/15 sm:via-[#21150f]/60"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t
+              <div
+                className="absolute inset-0 bg-gradient-to-t
                 from-[#170c07]/90 via-transparent to-[#170c07]/30"
               />
 
               {/* GOLD AMBIENT LIGHT */}
 
-              <div className="pointer-events-none absolute -left-32 top-1/4
+              <div
+                className="pointer-events-none absolute -left-32 top-1/4
                 h-96 w-96 rounded-full bg-[#d0a54d]/10 blur-[100px]"
               />
 
-              <div className="pointer-events-none absolute -right-32 bottom-0
+              <div
+                className="pointer-events-none absolute -right-32 bottom-0
                 h-80 w-80 rounded-full bg-[#a57a32]/10 blur-[90px]"
               />
 
               {/* SLIDE CONTENT */}
 
-              <div className="relative z-10 mx-auto flex h-full max-w-[1440px]
+              <div
+                className="relative z-10 mx-auto flex h-full max-w-[1440px]
                 items-center px-6 pb-24 pt-12 sm:px-10 md:pb-28 lg:px-16"
               >
                 <div className="w-full max-w-4xl">
-
                   {/* EYEBROW */}
 
                   <div className="mb-6 flex items-center gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center
+                    <div
+                      className="flex h-10 w-10 shrink-0 items-center
                       justify-center rounded-full border border-[#d4b16c]/50
                       bg-[#21150f]/60 shadow-lg backdrop-blur-md"
                     >
@@ -157,13 +161,15 @@ export default function Carousel() {
                     </div>
 
                     <div>
-                      <p className="text-[10px] font-bold uppercase
+                      <p
+                        className="text-[10px] font-bold uppercase
                         tracking-[0.22em] text-[#e2c37c] sm:text-xs"
                       >
                         Traditional Astrology
                       </p>
 
-                      <p className="mt-1 text-[10px] tracking-[0.12em]
+                      <p
+                        className="mt-1 text-[10px] tracking-[0.12em]
                         text-white/65 sm:text-xs"
                       >
                         WISDOM · TRADITION · GUIDANCE
@@ -196,16 +202,17 @@ export default function Carousel() {
 
                   {/* GURUJI NAME */}
 
-                  <p className="mb-4 font-serif text-xl font-semibold
+                  <p
+                    className="mb-4 font-serif text-xl font-semibold
                     text-[#f0d69a] sm:text-2xl md:text-3xl"
                   >
-                    <span className="text-white/85">Pandit</span>{" "}
-                    {person_name}
+                    <span className="text-white/85"></span> {person_name}
                   </p>
 
                   {/* DESCRIPTION */}
 
-                  <p className="max-w-2xl text-sm leading-7 text-[#f2e7d8]
+                  <p
+                    className="max-w-2xl text-sm leading-7 text-[#f2e7d8]
                     sm:text-base sm:leading-8 md:text-lg"
                   >
                     {slide.description}
@@ -213,7 +220,8 @@ export default function Carousel() {
 
                   {/* CONSULTATION CTA */}
 
-                  <div className="mt-8 flex max-w-xl flex-col gap-3
+                  <div
+                    className="mt-8 flex max-w-xl flex-col gap-3
                     sm:flex-row sm:flex-wrap"
                   >
                     <a
@@ -228,7 +236,8 @@ export default function Carousel() {
                     >
                       <Phone className="h-4 w-4" />
                       Call for Consultation
-                      <ArrowUpRight className="h-4 w-4 transition-transform
+                      <ArrowUpRight
+                        className="h-4 w-4 transition-transform
                         group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                       />
                     </a>
@@ -243,7 +252,8 @@ export default function Carousel() {
                         hover:border-[#e4c981] hover:bg-white/[0.14]"
                     >
                       Explore Services
-                      <ArrowRight className="h-4 w-4 transition-transform
+                      <ArrowRight
+                        className="h-4 w-4 transition-transform
                         group-hover:translate-x-1"
                       />
                     </Link>
@@ -251,12 +261,14 @@ export default function Carousel() {
 
                   {/* TRUST DETAIL */}
 
-                  <div className="mt-8 flex flex-wrap items-center gap-x-5
+                  <div
+                    className="mt-8 flex flex-wrap items-center gap-x-5
                     gap-y-3 text-[10px] font-medium tracking-wide
                     text-[#ead9b7] sm:text-xs"
                   >
                     <span className="flex items-center gap-2">
-                      <Star className="h-3.5 w-3.5 fill-[#d4b16c]
+                      <Star
+                        className="h-3.5 w-3.5 fill-[#d4b16c]
                         text-[#d4b16c]"
                       />
                       Traditional wisdom
@@ -274,28 +286,33 @@ export default function Carousel() {
 
               {/* SINCE 1956 BADGE */}
 
-              <div className="absolute right-10 top-10 z-20 hidden
+              <div
+                className="absolute right-10 top-10 z-20 hidden
                 h-28 w-28 items-center justify-center rounded-full
                 border border-[#d4b16c]/60 bg-[#21150f]/50 text-center
                 shadow-[0_10px_35px_rgba(0,0,0,0.2)] backdrop-blur-xl
                 lg:flex"
               >
-                <div className="absolute inset-1.5 rounded-full
+                <div
+                  className="absolute inset-1.5 rounded-full
                   border border-[#d4b16c]/20"
                 />
 
                 <div>
-                  <Sparkles className="mx-auto mb-1 h-3.5 w-3.5
+                  <Sparkles
+                    className="mx-auto mb-1 h-3.5 w-3.5
                     text-[#d4b16c]"
                   />
 
-                  <p className="text-[9px] font-semibold uppercase
+                  <p
+                    className="text-[9px] font-semibold uppercase
                     tracking-[0.2em] text-[#d4b16c]"
                   >
                     Tradition
                   </p>
 
-                  <p className="my-0.5 font-serif text-2xl font-bold
+                  <p
+                    className="my-0.5 font-serif text-2xl font-bold
                     text-[#f4d99c]"
                   >
                     1956
@@ -345,7 +362,8 @@ export default function Carousel() {
 
       {/* SLIDE INDICATORS */}
 
-      <div className="absolute bottom-6 left-1/2 z-30 flex
+      <div
+        className="absolute bottom-6 left-1/2 z-30 flex
         -translate-x-1/2 items-center gap-2"
       >
         {slides.map((slide, index) => (
@@ -366,7 +384,8 @@ export default function Carousel() {
 
       {/* SLIDE COUNTER */}
 
-      <div className="absolute bottom-5 right-5 z-30 hidden
+      <div
+        className="absolute bottom-5 right-5 z-30 hidden
         items-center gap-3 font-medium sm:flex md:right-10"
       >
         <span className="font-serif text-lg text-[#f1d58b]">
