@@ -1,4 +1,3 @@
-
 import {
   ArrowRight,
   Phone,
@@ -9,10 +8,7 @@ import {
   Heart,
 } from "lucide-react";
 
-import {
-  person_name,
-  phone_number,
-} from "../Genaral/secret";
+import { person_name, phone_number } from "../Genaral/secret";
 
 const problems = [
   "ಸ್ತ್ರೀ-ಪುರುಷ ವಶೀಕರಣ",
@@ -39,7 +35,6 @@ const kannadaFont = {
 export default function KannadaAstrologerModern() {
   return (
     <section className="relative overflow-hidden bg-[#faf7f0] px-4 py-16 text-[#2c1d14] sm:px-6 md:py-24">
-
       {/* BACKGROUND DECORATION */}
 
       <div className="pointer-events-none absolute -right-40 top-0 h-[420px] w-[420px] rounded-full bg-[#d6b875]/10 blur-[100px]" />
@@ -49,18 +44,15 @@ export default function KannadaAstrologerModern() {
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.035]"
         style={{
-          backgroundImage:
-            "radial-gradient(#82663c 0.7px, transparent 0.7px)",
+          backgroundImage: "radial-gradient(#82663c 0.7px, transparent 0.7px)",
           backgroundSize: "22px 22px",
         }}
       />
 
       <div className="relative mx-auto max-w-7xl">
-
         {/* INTRODUCTION */}
 
         <div className="mx-auto mb-12 max-w-4xl text-center md:mb-16">
-
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d7c29b] bg-white/80 px-5 py-2.5 shadow-sm">
             <Sparkles className="h-4 w-4 text-[#a77c32]" />
 
@@ -80,7 +72,7 @@ export default function KannadaAstrologerModern() {
             style={kannadaFont}
             className="text-3xl font-bold leading-[1.55] tracking-tight text-[#302016] sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            ಕೇರಳದ ಮಾಂತ್ರಿಕ
+            ಕೊಳ್ಳೇಗಾಲ ಮೊಡಿ ಯಲ್ಲಪ್ಪ ಗುರೂಜಿ
           </h2>
 
           <h3
@@ -112,16 +104,13 @@ export default function KannadaAstrologerModern() {
         {/* MAIN CONTENT */}
 
         <div className="grid items-stretch gap-6 lg:grid-cols-[0.82fr_1.18fr]">
-
           {/* ASTROLOGER PROFILE */}
 
           <div className="relative overflow-hidden rounded-[28px] bg-[#261910] p-7 text-[#fff5df] shadow-[0_20px_60px_rgba(48,29,14,0.14)] sm:p-9 md:rounded-[32px]">
-
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-[#d1af69]/10" />
             <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full border border-[#d1af69]/10" />
 
             <div className="relative">
-
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#d4b16c]/40 bg-[#d4b16c]/10">
                 <Sparkles className="h-7 w-7 text-[#e3c783]" />
               </div>
@@ -141,8 +130,8 @@ export default function KannadaAstrologerModern() {
                 style={kannadaFont}
                 className="mt-3 text-sm leading-8 text-[#e2d4c1]/80"
               >
-                ಸಾಂಪ್ರದಾಯಿಕ ಜ್ಯೋತಿಷ್ಯ ಮತ್ತು ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನದ ಮೂಲಕ
-                ಜೀವನದ ಪ್ರಮುಖ ವಿಷಯಗಳ ಕುರಿತು ವೈಯಕ್ತಿಕ ಸಮಾಲೋಚನೆ.
+                ಸಾಂಪ್ರದಾಯಿಕ ಜ್ಯೋತಿಷ್ಯ ಮತ್ತು ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನದ ಮೂಲಕ ಜೀವನದ
+                ಪ್ರಮುಖ ವಿಷಯಗಳ ಕುರಿತು ವೈಯಕ್ತಿಕ ಸಮಾಲೋಚನೆ.
               </p>
 
               {/* EXPERIENCE BADGE */}
@@ -207,9 +196,7 @@ export default function KannadaAstrologerModern() {
           {/* ABOUT & PROBLEMS */}
 
           <div className="rounded-[28px] border border-[#e6dac5] bg-white p-6 shadow-[0_12px_45px_rgba(48,29,14,0.045)] sm:p-8 md:rounded-[32px] md:p-9">
-
             <div className="flex items-start gap-4">
-
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f4ecdd]">
                 <Sparkles className="h-5 w-5 text-[#9b7335]" />
               </div>
@@ -227,15 +214,6 @@ export default function KannadaAstrologerModern() {
                 </h3>
               </div>
             </div>
-
-            <p
-              style={kannadaFont}
-              className="mt-6 text-sm leading-8 text-[#74675a] sm:text-base sm:leading-9"
-            >
-              ಚಿತ್ರದುರ್ಗದಲ್ಲಿ ಖಾಯಂಯಾಗಿ ನೆಲೆಸಿದ್ದಾರೆ. ಹಸ್ತ, ರಾಶಿ,
-              ಮುಖ ಲಕ್ಷಣ, ಜಾತಕ ಮತ್ತು ಕುಂಡಲಿ ಆಧಾರದ ಮೇಲೆ ಜೀವನದ ಪ್ರಮುಖ
-              ವಿಷಯಗಳ ಕುರಿತು ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತಾರೆ.
-            </p>
 
             {/* PROBLEMS */}
 
@@ -285,7 +263,8 @@ export default function KannadaAstrologerModern() {
                     style={kannadaFont}
                     className="text-sm font-bold leading-7 text-[#594126]"
                   >
-                    ನಿಮ್ಮ ಸಮಸ್ಯೆಗಳ ಕುರಿತು ವೈಯಕ್ತಿಕ ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನಕ್ಕಾಗಿ ಸಂಪರ್ಕಿಸಿ.
+                    ನಿಮ್ಮ ಸಮಸ್ಯೆಗಳ ಕುರಿತು ವೈಯಕ್ತಿಕ ಆಧ್ಯಾತ್ಮಿಕ ಮಾರ್ಗದರ್ಶನಕ್ಕಾಗಿ
+                    ಸಂಪರ್ಕಿಸಿ.
                   </p>
 
                   <p className="mt-2 text-xs leading-6 text-[#88755c]">
@@ -300,7 +279,6 @@ export default function KannadaAstrologerModern() {
         {/* SERVICES */}
 
         <div className="mt-14 md:mt-16">
-
           <div className="mb-7 text-center">
             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#a17c41]">
               OUR SERVICES
@@ -339,12 +317,9 @@ export default function KannadaAstrologerModern() {
           </div>
         </div>
 
-     
-
         {/* BOTTOM CTA */}
 
         <div className="mt-10 overflow-hidden rounded-[28px] bg-[#261910] px-6 py-8 text-center shadow-[0_15px_45px_rgba(48,29,14,0.12)] sm:px-10 sm:py-10">
-
           <Sparkles className="mx-auto h-6 w-6 text-[#d4b16c]" />
 
           <h3
@@ -355,7 +330,8 @@ export default function KannadaAstrologerModern() {
           </h3>
 
           <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-[#c8b69d]">
-            Get in touch to discuss your questions and learn more about the available services.
+            Get in touch to discuss your questions and learn more about the
+            available services.
           </p>
 
           <a
@@ -367,7 +343,6 @@ export default function KannadaAstrologerModern() {
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>
-
       </div>
     </section>
   );
